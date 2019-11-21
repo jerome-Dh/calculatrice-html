@@ -3,7 +3,7 @@
 
 ## Calculatrice numérique pour le navigateur
 
-![capture](https://github.com/jerome-Dh/calculatrice-html/blob/master/capture/c1.png)
+![capture](https://github.com/jerome-Dh/calculatrice-html/blob/master/capture/c.png)
 
 Cette calculatrice numérique effectue des calculs arithmétiques sur la base décimale et gère les opérations de base ``(+, -, *, /)`` mais aussi l'inverse ``1/x``, le pourcentage ``%``, la racine carréé ``?`` et les fonctions de mémorisation.
 
