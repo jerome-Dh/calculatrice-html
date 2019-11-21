@@ -14,11 +14,11 @@ Cette calculatrice est réalisée en 2016 dans le cadre d'un projet de cours duran
 
 ## Technologies utilisées
 
-Le but du projet était de maitriser des langages pour le web. Ainsi cette calculatrice est réalisée en utilisant les langages tels que le CSS, le HTML5 et le JavaScript. Il y figure aussi beaucoup de notion d'algorithmique car enchainer de bout en bout les suites de calculs arithmétiques demandent l'utilisation de l'algorithmique un peu évolué.
+Le but du projet était de maîtriser des langages pour le web. Ainsi cette calculatrice est réalisée en utilisant les langages tels que le CSS, le HTML5 et le JavaScript. Il y figure aussi beaucoup de notion d'algorithmique car enchainer de bout en bout les suites de calculs arithmétiques demande l'utilisation de l'algorithmique un peu évolué.
 
 ## Exemples de calculs
 
-Tous les opérations sont faites en suivant la méthodologie des calculs standards
+Toutes les opérations sont faites en suivant la méthodologie des calculs standards
 
 Exemples
 ```8 * 4 + 8 / 10```
@@ -32,6 +32,7 @@ donnerait ``4`` car l'évaluation se fait de gauche vers la droite.
 
 ## Auteurs
 
++ Jerome Dh
 - [GitHub](https://github.com/jerome-Dh)
 - [LinkedIn](https://www.linkedin.com/in/jerome-dh)
 
@@ -42,4 +43,4 @@ Ce projet est sous licence MIT - voir le fichier [MIT license](https://opensourc
 ## Remerciements
 
 * A tous les membres du groupe
-* A notre enseignant Chargé de cours Dr Noumsi
+* A notre enseignant Chargé de Cours Dr Noumsi
