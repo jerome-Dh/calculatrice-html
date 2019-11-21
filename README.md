@@ -29,11 +29,9 @@ donnerait ``4`` car l'évaluation se fait de gauche vers la droite.
 
 ## Auteur
 
-+ Jerome Dh
- 
- [GitHub](https://github.com/jerome-Dh)
-
- [LinkedIn](https://www.linkedin.com/in/jerome-dh)
+<< Jerome Dh >>
+	[GitHub](https://github.com/jerome-Dh)
+	[LinkedIn](https://www.linkedin.com/in/jerome-dh)
 
 ## Licence
 
