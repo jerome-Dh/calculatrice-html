@@ -1,0 +1,203 @@
+<!--
+
+	Projet de réalisation d'une calculatrice numérique
+	pour le compte de l'UE IN452
+	Année Académique 2015/2016
+	Faculté de Sciences - UD
+	
+	@author: Jérôme Dh <jdieuhou@gmail.com>
+	
+	@maj: 04/05/16
+	
+-->
+<!DOCTYPE html>
+<html lang="fr" dir='ltr'>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name='author' content='Jérôme Dh'/>
+		<meta name='keywords' content="calculatrice"/>
+		<meta name='description' content="Votre Calculatrice numérique"/>
+		<title>Calculatrice</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				font-family:arial,verdana;
+				color:rgb(15%,18%,22%);
+			}
+			body{
+				min-width: 1004px;
+				margin:0 auto;
+			}
+			#header{
+				text-align:center;
+				margin: 20px;
+				
+			}
+			#header h1{
+				color: #c48231;
+				font-size: 1.6em;
+			}
+			table{
+				width:300px;
+				margin:10px auto 60px;
+				border: 1px solid #aeaeae;
+			}
+			table #resultat{
+				padding:8px;
+				margin: 4px;
+				width: 95%;
+				text-align:right;
+				font-size:20px;
+				height: 40px;
+				border: 1px solid #8aaed2;
+				border-radius:0 0 8px 0;
+			}
+			table input[name="bOn"], table input[name="bOff"]{
+				font-weight:bold;
+			}
+			table input[name="bOn"]{
+				color:#0f0;
+			}
+			table input[name="bOff"]{
+				color:#f00;
+			}
+			table #time{
+				font-size:13px;
+				text-align:center;
+				border: 1px solid #c4d6e8;
+				background: #f9fbfd;
+				height:20px;
+				border-radius: 0 0 4px 4px;
+			}
+			input[type='button']{
+				padding:5px;
+				margin:4px;
+				width:60px;
+				height:40px;
+			}
+			input[name="bZero"]{
+				width:130px;
+			}
+			input[name="bEgal"]{
+				height:90px;
+			}
+			table .bFonction{
+				color:#5455e0;
+			}
+			#mMemoire{
+				position:absolute;
+				margin: 30px 5px 0;
+				
+			}
+			input[name="bInit"]{
+				color:#0f0;
+			}
+			#footer{
+				border-top:1px solid #a0a0a0;
+				height: 70px;
+				font-size: 12px;
+				line-height: 20px;
+				width: 1000px;
+				margin:0 auto;
+		
+			}
+			#footer div{
+				width:300px;
+				border-top:1px solid #a0a0a0;
+				margin:5px 10px;
+				float:left;
+			}
+			#footer div span{
+				display: block;
+			}
+
+		</style>
+	</head>
+	<body dir="ltr" lang="fr">
+		<div id="header">
+			<h1>Calculatrice Numérique</h1>
+		</div>
+		<div id="contenu">
+			
+			<div id="calculatrice">
+				<table border="0" cellspacing="0" cellpadding="5">
+					<thead>
+						<tr><td id='mMemoire'></td></tr>
+						<tr><th colspan="5" id="resultat">0</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="3" id="time"></td>
+							<td><input type="button" name="bOn" value="ON"/></td>
+							<td><input type="button" name="bOff" value="OFF"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" name="bCleanMemory" value="MC" class="bFonction" title='Effacer la memoire'/></td>
+							<td><input type="button" name="bResetMemory" value="MR" class="bFonction" title='Afficher la memoire'/></td>
+							<td><input type="button" name="bSetMemory" value="MS" class="bFonction" title = 'Garder'/></td>
+							<td><input type="button" name="bMemoryPlus" value="M+" class="bFonction" title='Ajouter à la memoire'/></td>
+							<td><input type="button" name="bMemoryMoins" value="M-" class="bFonction" title='Soustraire de la memoire'/></td>
+						</tr>
+						<tr>
+							<td><input type="button" name="bDelete" value="Del" class="bFonction" title= "Effacer le dernier chiffre"/></td>
+							<td><input type="button" name="bClean" value="CE" class="bFonction"/></td>
+							<td><input type="button" name="bInit" value="C" class="bFonction"/></td>
+							<td><input type="button" name="bPlusMoins" value="&#177" class="bFonction"/></td>
+							<td><input type="button" name="bRacineCarree" value="ⱱ" class="bFonction"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" name="bSept" value="7" class="bNombre"/></td>
+							<td><input type="button" name="bHuit" value="8" class="bNombre"/></td>
+							<td><input type="button" name="bNeuf" value="9" class="bNombre"/></td>
+							<td><input type="button" name="bDivision" value="/" class="bFonction"/></td>
+							<td><input type="button" name="bPourcentage" value="&#37" class="bFonction"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" name="bQuatre" value="4" class="bNombre"/></td>
+							<td><input type="button" name="bCinq" value="5" class="bNombre"/></td>
+							<td><input type="button" name="bSix" value="6" class="bNombre"/></td>
+							<td><input type="button" name="bMultiplication" value="*" class="bFonction"/></td>
+							<td><input type="button" name="bInverse" value="1/x" class="bFonction"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" name="bUn" value="1" class="bNombre"/></td>
+							<td><input type="button" name="bDeux" value="2" class="bNombre" /></td>
+							<td><input type="button" name="bTrois" value="3" class="bNombre"/></td>
+							<td><input type="button" name="bSoustraction" value="-" class="bFonction"/></td>
+							<td rowspan="2"><input type="button" name="bEgal" value="=" class="bFonction"/></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="button" name="bZero" value="0" class="bNombre"/></td>
+							<td><input type="button" name="bVirgule" value="," class="bNombre"/></td>
+							<td><input type="button" name="bAddition" value="+" class="bFonction"/></td>
+						</tr>
+												
+					</tbody>
+					<tfoot>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<strong>Projet Calculatrice numérique</strong>
+				<p>Projet TPE menant à la réalisation d'une calculatrice numérique pour le compte de UE IN452<br>
+				Année 2015/2016 UD/Faculté de Sciences</p>
+			</div>
+			<div>
+				<strong>Membres du groupe</strong><br/>
+				<span>1. Dieuhou Kahi Jérôme - 13S06739</span>
+				<span>2. Deugueu Djietcheu Jean-Bosco - 14S24219</span>
+				<span>3. Manfouo Kuete Ben-Oni Tertius - 14S20580</span>
+				<span>4. Foadjione Tala Antoine - 14S19406</span>
+			</div>
+			<div>
+				<strong>Remerciements</strong>
+				<p>+ Dr Noumsi (Chargé de cours) <br>+ Tous les membres du groupe<br>+ Auteurs des cours et tutoriels lus</p>
+			</div>
+		
+		</div>
+		<script src="calculatrice.js"></script>
+	</body>
+</html>
